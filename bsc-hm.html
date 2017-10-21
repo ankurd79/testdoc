@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>SRM</title>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+<!-- CSS -->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/jquery.js"></script>
+     <script type="text/javascript" src="js/cycle-plugin.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	
+	$('#fade').cycle();
+	
+	
+	$("ul.midnav li a").click(function(){
+		//alert("Sugata");
+		$("ul.midnav li a").removeClass("active");
+		$(this).addClass("active");
+		
+		var a=$(this).attr("rel");
+		//alert(a);
+		$(".introtxt").hide();
+		$("#"+$(this).attr("rel")).show();	
+		//$("#"+$(this).attr("rel")).addClass("introtxtcolorbg");
+		});
+		
+		$('.blink').each(function() {
+         var elem = $(this);
+         setInterval(function() {
+             if (elem.css('color') == 'rgb(255, 255, 255)') {
+                 elem.css('color', 'rgb(12, 71, 127)'); //I'm changing the background color, you may hide and show the div as well.
+             } else {
+                 elem.css('color', 'rgb(255, 255, 255)');
+             }
+         }, 1500);
+     	});
+	
+	
+	});
+
+</script>
+<!-- Javascript -->
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8/jquery.validate.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var  validator = $("#frm1").validate({
+		rules: {
+		 //name: "required", textonly: true,
+		 
+		 name:{
+			required: true, 
+		 },
+		 
+		 phn: {
+		   required: true,
+		   digits: true
+		 },
+
+		 city: {
+		   required: true,
+		   
+		 },
+
+
+		 email: {
+		   required: true,
+		   email: true
+		 }
+		},
+		messages: {
+		 name: "Please specify your name",
+		 email: {
+		   required: "Provide a valid email address",
+		   email: "Provide a valid email address",
+		   phn: "Contact number should be numeric",
+		   city: "Please specify a city name"
+		   
+		 }
+		},
+		
+	});
+	
+	/*$("form").submit(function()
+	{
+  		alert("Submitted");
+	}); */
+	
+});
+
+</script>
+
+</head>
+
+<body>
+<div class="tollfree">
+<div class="punchtxt">Learning / Freedom / Empowerment / Creativity / Innovation / Self Knowledge.</div>
+<div class="phone">
+<img src="images/contact-icon.png" />CALL US NOW ON 18001803033
+</div>
+<div class="clear"></div>
+</div>
+
+<div id="top">
+<div class="logo"><img src="images/srm-logo.jpg" /></div>
+<div class="specifications">
+<ul class="data">
+	<li>Ranked<span>No.1</span><br />Private University of India</li>
+	<li>Category<span>'A'</span><br />by HRD Ministry, Govt. of India</li>
+	<li><span>100%</span><br />Placement</li>
+	<li><span>29</span><br />Years of Enlighting Lives</li>
+	<li><span>22.46</span><br />Acres of campus</li>
+	<li><span>37000+</span><br />Students from around the World</li>
+	<li><span>250+</span><br />Faculty</li>
+	<li><span>82</span><br />AC classrooms</li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+
+
+<div id="bottom">
+<!--<div class="lft">-->
+<div id="fade" style="float:left;">
+<img src="images/left-mainimg01.jpg">
+<img src="images/left-mainimg02.jpg">
+<img src="images/left-mainimg03.jpg">
+<img src="images/left-mainimg04.jpg">
+<img src="images/left-mainimg05.jpg">
+<img src="images/left-mainimg06.jpg">
+</div>
+<!--</div>-->
+<div class="mid">
+<img src="images/no-donation-banner.png" class="nodonationbanner"/>
+<div class="motto"><p>Learn. Leap. Lead</p></div>
+<ul class="midnav">
+	<li><a href="#" class="active" rel="courses">Courses</a></li>
+	<li><a href="#" rel="faculty">Faculty</a></li>
+	<li><a href="#" rel="infrastructure">Infrastructure</a></li>
+	<li><a href="#" rel="Placements">Placements</a></li>
+	<!--<li><a href="#" rel="testimonials">Testimonials</a></li>-->
+</ul>
+
+<div class="introtxt show" id="courses">
+<h3>Courses Offered</h3>
+<h2>B.Sc. Hotel Management & Catering Technology</h2>
+<h4>Duration : 3 Years</h4>
+
+<p>&nbsp;</p>
+<h3>The Syllabus includes various topics such as:</h3>
+<h4>Food Production</h4>
+<h4>Catering Science</h4>
+<h4>Front Office Operation</h4>
+<h4>Food & Beverage service</h4>
+</div>
+
+
+<div class="introtxt" id="faculty">
+<!-- <h4>Dr. Nanak Chand  - Professor</h4>
+<h4>Dr.Sharat Sharma  - Asstt.Professor (SrG) (HOD)</h4>
+<h4>Dr.Ajay Jain  - Asstt.Professor (SrG) (HOD Int.)</h4>
+<h4>Mr.Piyush Pandey  - Asstt.Professor (OG)</h4>
+<h4>Dr.Anubha Sharma  - Assistant Professor (SrG)</h4>
+<h4>Ms.Swati Bhatt  - Assistant Professor (SrG)</h4>
+<h4>Dr. Nidhi Arora Kumar  - Asstt.Professor (OG)</h4>
+<h4>Dr.Asim Ray  - Asstt.Professor (OG)</h4>
+<h4>Mr.Vikas Kumar  - Asstt.Professor (OG)</h4>
+<h4>Mr.Gopal Bihari Saraswat  - Asstt.Professor (OG)</h4>
+<h4>Ms.Sandhya Choudhary  - Asstt.Professor (OG)</h4>
+<h4>Ms.Chandra Sharda  - Asstt.Professor (OG)</h4> -->
+
+	<ul class="facultynames">
+		<li><strong>Dr. Vineet Bajaj </strong><br>Assistant Professor-SrG/ HOD</li>
+		<li><strong>Dr.R.P.Mahapatra</strong><br>Professor & HOD </li>
+		<li><strong>Mr.P.Freedon Daniel </strong><br>Assistant Professor/HOD (S.G)</li>
+		<li><strong>Dr.Manoj Kumar Pandey</strong><br>Director/HOD</li>
+		<li><strong>Sanjeev Uppal</strong><br>Assistant Professor (OG)/HDO</li>
+		<li><strong>Dr.Manju Singh</strong><br>Assistant Professor (SG)/HOD</li>
+		<li><strong>Mr.Naveen Ahlawat</strong><br>Assistant Professor (SrG)HOD</li>
+		<li><strong>Dr. Prerna Sharma</strong><br>Assistant Professor /HOD/(SG)</li>
+		<li><strong>Mr.Rajender Kumar Sharma</strong><br>Principal (HOD)</li>
+		<li><strong>Mr. Madan Kumar</strong><br>Assistant Professor/ Head Incharge</li>
+		<li><strong>Dr.Sharat Sharma</strong><br>Asstt.Professor (SrG) (HOD)</li>
+	</ul>
+
+
+</div>
+
+<div class="introtxt" id="infrastructure">
+<h4><strong>The Library</strong></h4>
+<ul>
+	<li>Spacious Reading Section</li>
+	<li>More than 150 International and National Journals and 35000 Books</li>
+	<li>Online Library (DELNET)</li>
+</ul>
+<h4><strong>The Computer Lab</strong></h4>
+<ul>
+	<li>Finest computing environments</li>
+	<li>Cluster/virtualized servers and a campus wide network with wi-fi access to Internet</li>
+	<li>High grade brand IBM server with latest application  software has been provided in the lab</li>
+</ul>
+<h4><strong>Sports Facility</strong><br>The campus has a Basket Ball Court, Badminton and Tennis Court, spacious playgrounds for Football and Cricket etc.</h4>
+<h4><strong>Hostels</strong><br>Separate hostels for Boys and Girls accomodating nearly 1800 students.</h4>
+<h4><strong>Medical Facility</strong><br>Qualified registered Doctors will be present in the medical centre to provide first aid facilities.</h4>
+</div>
+
+<div class="introtxt" id="Placements">
+<ul class="brands">
+	<li><img src="images/coke-logo.gif" /></li>
+	<li><img src="images/motherdairy-logo.gif" /></li>
+	<li><img src="images/bisleri-logo.gif" /></li>
+	<li><img src="images/itc-logo.gif" /></li>
+	<li><img src="images/niit-logo.gif" /></li>
+	<li><img src="images/parle-logo.gif" /></li>
+	<li><img src="images/ibm-logo.gif" /></li>
+	<li><img src="images/lt-logo.gif" /></li>
+	<li><img src="images/citibank-logo.gif" /></li>
+	<li><img src="images/genpact-logo.gif" /></li>
+	<li><img src="images/maruti-logo.gif" /></li>
+	<li><img src="images/hdfc-logo.gif" /></li>
+	<li><img src="images/ing-logo.gif" /></li>
+	<li><img src="images/oracle-logo.gif" /></li>
+	<li><img src="images/oracle-logo.gif" /></li>
+	<li><img src="images/accenture-logo.gif" /></li>
+	<li><img src="images/infosys-logo.gif" /></li>
+	<li><img src="images/mahindra-logo.gif" /></li>
+	<li><img src="images/idbi-logo.gif" /></li>
+	<li><img src="images/rbs-logo.gif" /></li>	
+</ul>
+
+</div>
+
+<!--<div class="introtxt" id="testimonials">
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut id lorem. In molestie suscipit quam. Suspendisse ultricies imperdiet erat. Duis vitae lorem ut sem volutpat dapibus. Quisque fermentum. Etiam molestie velit a justo. Sed tincidunt quam eget nunc.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut id lorem. In molestie suscipit quam. Suspendisse ultricies imperdiet erat. Duis vitae lorem ut sem volutpat dapibus. Quisque fermentum. Etiam molestie velit a justo. Sed tincidunt quam eget nunc.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut id lorem. In molestie suscipit quam. Suspendisse ultricies imperdiet erat. Duis vitae lorem ut sem volutpat dapibus. Quisque fermentum. Etiam molestie velit a justo. Sed tincidunt quam eget nunc.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut id lorem. In molestie suscipit quam. Suspendisse ultricies imperdiet erat. Duis vitae lorem ut sem volutpat dapibus. Quisque fermentum. Etiam molestie velit a justo. Sed tincidunt quam eget nunc.</p>
+</div>-->
+
+
+</div>
+<div class="rht">
+
+<div class="enquireform">
+<h2 class="blink">Enroll for Admission and Scholarships in B.Sc. Hotel Management & Catering Technology 2014</h2>
+<form id="frm1" name="" method="post" action="thank-you.php">
+<div class="formelements">
+<div class="label">Name*</div>
+<div class="fields"><input name="name" id="name" type="text" /></div>
+<div class="label">Email ID*</div>
+<div class="fields"><input name="email" id="email" type="text" /></div>
+<div class="label">Phone No.*</div>
+<div class="fields"><input name="phn" id="phn" type="text" /></div>
+<div class="label">City*</div>
+<div class="fields"><input name="city" id="city" type="text" /></div>
+<div class="label">Courses*</div>
+<div class="fields">
+<select name="ddlCountry" id="ddlCountry" class="form_box_input_select">
+		<option value="Select Country">Select Courses</option>
+		<option value="B.Sc. Hotel Management & Catering Technology">B.Sc. Hotel Management & Catering Technology</option>				
+	</select>
+</div>
+
+<div class="fields" style="text-align:center;"><input name="submit" id="submit" type="submit" class="submitbtn" value="Enroll Now"/></div>
+
+</div>
+<input type="hidden" name="page" id="page" value="bsc-hm.html">
+</form>
+
+
+
+</div>
+
+<!-- <div class="download"><img src="images/download-icon.png" /><a href="#">Download Brochure</a></div> -->
+
+</div>
+<div class="clear"></div>
+</div>
+
+
+
+</body>
+</html>
